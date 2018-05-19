@@ -61,14 +61,25 @@ var orm = {
         queryString += printQuestionMarks(vals.length);
         queryString += ") ";
 
-        console.log("----------------------");
-        console.log("orm > insertOne > query");
-        console.log(queryString);
+        // console.log("orm.js----------------------");
+        // console.log("orm > insertOne > query");
+        // console.log(queryString);
+        // console.log("end of queryString")
+
 
         connection.query(queryString, vals, function(err, result) {
+            // console.log();
+            // console.log("error!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+            // console.log(err);
+            // console.log("**********************************");
+            // console.log(queryString);
+            // console.log("End of error");
+            // console.log();
             if (err) {
                 throw err;
             }
+            console.log("result-----------------------------");
+            console.log(result);
 
             cb(result);
         });

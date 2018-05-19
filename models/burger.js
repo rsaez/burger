@@ -9,6 +9,18 @@ var burger = {
   },
   // The variables cols and vals are arrays.
   insertOne: function(cols, vals, cb) {
+
+    // console.log();
+    // console.log("models > burger.js--------------------------------------");
+    // console.log("cols");
+    // console.log(cols);
+    // console.log("vals");
+    // console.log(vals);
+    // console.log("cb");
+    // console.log(cb);
+    // console.log("********************************************************");
+    // console.log();
+
     orm.insertOne("burgers", cols, vals, function(res) {
       cb(res);
     });
