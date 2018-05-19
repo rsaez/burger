@@ -39,9 +39,9 @@ function objToSql(ob) {
     return arr.toString();
 }
 
-// Object for all our SQL statement functions.
+// Object for selectAll our SQL statement functions.
 var orm = {
-    all: function(tableInput, cb) {
+    selectAll: function(tableInput, cb) {
         var queryString = "SELECT * FROM " + tableInput + ";";
         connection.query(queryString, function(err, result) {
             if (err) {
