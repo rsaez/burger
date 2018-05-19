@@ -61,6 +61,8 @@ var orm = {
         queryString += printQuestionMarks(vals.length);
         queryString += ") ";
 
+        console.log("----------------------");
+        console.log("orm > insertOne > query");
         console.log(queryString);
 
         connection.query(queryString, vals, function(err, result) {
